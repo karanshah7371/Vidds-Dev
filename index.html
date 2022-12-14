@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- COLOR PICKER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
+    <!--  -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Vidds.co</title>
+  </head>
+  <body>
+    <div id="vidds_root">
+      <header class="vidds_header">
+        <div class="container">
+          <span class="ham">
+            <img id="ham-icon" src="./assets/icon/ic_menu.svg" />
+          </span>
+          <span class="logo">
+            <img src="assets/logo.svg" alt="icon" />
+          </span>
+
+          <div class="nav-btns">
+            <span class="question">
+              <img src="./assets/icon/ic_question.svg" alt="icon" />
+            </span>
+            <button class="create_video">
+              <span class="plus">
+                <img src="./assets//icon/ic_add.svg" alt="icon" />
+              </span>
+              <span class="text"> Create a Video </span>
+            </button>
+            <span class="avatar">
+              <img
+                src="https://img.icons8.com/color/96/null/circled-user-male-skin-type-1-2--v1.png"
+              />
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!--  -->
+        <div class="aside-overlay" data-maximized="false">
+          <aside>
+            <ul class="menu">
+              <li active data-path="dashboard">
+                <div>
+                  <span class="icon" title="Dashboard">
+                    <img src="./assets/icon/ic_dashboard.svg" alt="icon" />
+                  </span>
+                  <span class="text">Dashboard</span>
+                </div>
+              </li>
+              <li data-path="my-vidds">
+                <div>
+                  <span class="icon" title="My Vidds">
+                    <img src="./assets/icon/ic_my-vidds.svg" alt="icon" />
+                  </span>
+                  <span class="text">My Vidds</span>
+                </div>
+              </li>
+              <li data-path="brand-kits">
+                <div>
+                  <span class="icon" title="Brand Kits">
+                    <img src="./assets/icon/ic_brand-kits.svg" alt="icon" />
+                  </span>
+                  <span class="text">Brand Kits✨</span>
+                </div>
+              </li>
+              <li data-path="templates">
+                <div>
+                  <span class="icon" title="Templates">
+                    <img src="./assets/icon/ic_templates.svg" alt="icon" />
+                  </span>
+                  <span class="text">Templates</span>
+                </div>
+              </li>
+              <li data-path="tutorials">
+                <div>
+                  <span class="icon" title="Tutorials">
+                    <img src="./assets/icon/ic_tutorials.svg" alt="icon" />
+                  </span>
+                  <span class="text">Tutorials</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="plans">
+              <h3>
+                <span class="icon">
+                  <img
+                    id="pricing-logo"
+                    src="./assets/icon/ic_plans.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="text"> Free Plan </span>
+              </h3>
+              <div class="ranges">
+                <span>
+                  <span>
+                    <label for="r1">Vidds</label>
+                    <span>3/4</span>
+                  </span>
+                  <progress id="r1" value="3" max="4" />
+                </span>
+                <span>
+                  <span>
+                    <label for="r2">Watermarked Vidds</label>
+                    <span>1/5</span>
+                  </span>
+                  <progress id="r2" value="1" max="5" />
+                </span>
+                <span>
+                  <span>
+                    <label for="r3">Storage</label>
+                    <span><a href="#">Manage</a></span>
+                  </span>
+                  <progress id="r3" value="8" max="10" />
+                </span>
+              </div>
+              <button>UPGRADE ✨</button>
+            </div>
+          </aside>
+        </div>
+
+        <!--  -->
+        <section class="vidds_main_container">
+          <!-- Dashboard -->
+          <div
+            id="vidds_dashboard"
+            class="route_container"
+            data-route="dashboard"
+            active-route
+          >
+            <div class="carousal_section sec">
+              <div class="head">
+                <h1>What will you create, Jhon!</h1>
+                <button class="btn_custom_video">Custom Video</button>
+              </div>
+
+              <div class="carousy_container">
+                <ul class="carousy1">
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Tweet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >TikTok Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >LinkedIn Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Facebook Ads Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Spreadsheet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                </ul>
+
+                <div class="carousal_nav">
+                  <button data-carousy-btn="prev">
+                    <img src="./assets/icon/ic_arrow_left.svg" alt="icon" />
+                  </button>
+                  <button data-carousy-btn="next">
+                    <img src="./assets/icon/ic_arrow_right.svg" alt="icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="sec vidds_container">
+              <div class="head">
+                <h1>Recent Vidds</h1>
+                <button>View All</button>
+              </div>
+
+              <div class="cards_container">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+              </div>
+            </div>
+
+            <div class="section-3 sec">
+              <div class="head">
+                <span class="expand_accordian">
+                  <img src="./assets/icon/ic_plus.svg" alt="" />
+                </span>
+                <h1>Latest Tutorials</h1>
+              </div>
+
+              <div class="carousel expand expand-active">
+                <div class="carousy_container">
+                  <ul class="carousy2">
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                    <li class="card_container">
+                      <div class="card" data-carousy-el="card"></div>
+                    </li>
+                  </ul>
+
+                  <div class="carousal_nav">
+                    <button data-carousy-btn="prev">
+                      <img src="./assets/icon/ic_arrow_left.svg" alt="icon" />
+                    </button>
+                    <button data-carousy-btn="next">
+                      <img src="./assets/icon/ic_arrow_right.svg" alt="icon" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- My Vidds -->
+          <div
+            id="vidds_my_vidds"
+            class="route_container"
+            data-route="my-vidds"
+          >
+            <div class="sec vidds_container">
+              <div class="head">
+                <h1>My Vidds</h1>
+              </div>
+
+              <div class="cards_container">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+              </div>
+            </div>
+
+            <div class="carousal_section sec">
+              <div class="head">
+                <h1>Create something beautiful, Jhon</h1>
+                <button class="btn_custom_video">Custom Video</button>
+              </div>
+
+              <div class="carousy_container">
+                <ul class="carousy3">
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Tweet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >TikTok Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >LinkedIn Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Facebook Ads Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Spreadsheet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                </ul>
+
+                <div class="carousal_nav">
+                  <button data-carousy-btn="prev">
+                    <img src="./assets/icon/ic_arrow_left.svg" alt="icon" />
+                  </button>
+                  <button data-carousy-btn="next">
+                    <img src="./assets/icon/ic_arrow_right.svg" alt="icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brand Kits -->
+          <div
+            id="vidds_brand_kits"
+            class="route_container"
+            data-route="brand-kits"
+          >
+            <div class="sec vidds_container">
+              <div class="head">
+                <h1>Brand Kits ✨</h1>
+                <button class="btn_create_brandkit">Create New Brandkit</button>
+              </div>
+
+              <div class="cards_container">
+                <div class="card">
+                  <div class="option_btns">
+                    <button class="edit">
+                      <img src="./assets/icon/ic_edit.svg" alt="icon" />
+                    </button>
+                    <button class="delete">
+                      <img src="./assets/icon/ic_trash.svg" alt="icon" />
+                    </button>
+                  </div>
+
+                  <div class="title">BrandKit 1</div>
+                </div>
+                <div class="card">
+                  <div class="option_btns">
+                    <button class="edit">
+                      <img src="./assets/icon/ic_edit.svg" alt="icon" />
+                    </button>
+                    <button class="delete">
+                      <img src="./assets/icon/ic_trash.svg" alt="icon" />
+                    </button>
+                  </div>
+                  <div class="title">BrandKit 2</div>
+                </div>
+                <div class="card">
+                  <div class="option_btns">
+                    <button class="edit">
+                      <img src="./assets/icon/ic_edit.svg" alt="icon" />
+                    </button>
+                    <button class="delete">
+                      <img src="./assets/icon/ic_trash.svg" alt="icon" />
+                    </button>
+                  </div>
+
+                  <div class="title">BrandKit 3</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousal_section sec">
+              <div class="head">
+                <h1>Create something beautiful, Jhon</h1>
+                <button class="btn_custom_video">Custom Video</button>
+              </div>
+
+              <div class="carousy_container">
+                <ul class="carousy5">
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Tweet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >TikTok Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >LinkedIn Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Facebook Ads Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Spreadsheet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                </ul>
+
+                <div class="carousal_nav">
+                  <button data-carousy-btn="prev">
+                    <img src="./assets/icon/ic_arrow_left.svg" alt="icon" />
+                  </button>
+                  <button data-carousy-btn="next">
+                    <img src="./assets/icon/ic_arrow_right.svg" alt="icon" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <dic class="spacer"></dic>
+          </div>
+
+          <!-- Templates -->
+          <div
+            id="vidds_templates"
+            class="route_container"
+            data-route="templates"
+          >
+            <div class="sec vidds_container">
+              <div class="head">
+                <h1>Templates</h1>
+              </div>
+
+              <div class="inputs">
+                <select name="Filter">
+                  <option value="0">Filter by Category</option>
+                  <option value="1">lorem</option>
+                  <option value="2">ipsum</option>
+                </select>
+              </div>
+
+              <div class="cards_container">
+                <div class="card">
+                  <button>Customize</button>
+                </div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+                <div class="card"><button>Customize</button></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tutorials -->
+          <div
+            id="vidds_tutorials"
+            class="route_container"
+            data-route="tutorials"
+          >
+            <div class="sec vidds_container">
+              <div class="head">
+                <h1>Vidds Tutorials</h1>
+              </div>
+
+              <div class="inputs">
+                <select name="Filter">
+                  <option value="0">Filter by Category</option>
+                  <option value="1">lorem</option>
+                  <option value="2">ipsum</option>
+                </select>
+
+                <div class="ip">
+                  <input type="text" placeholder="or search..." />
+                  <span class="icon">
+                    <img src="./assets/icon/ic_search.svg" alt="icon" />
+                  </span>
+                </div>
+              </div>
+
+              <div class="cards_container">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+              </div>
+            </div>
+
+            <div class="carousal_section sec">
+              <div class="head">
+                <h1>Start creating, Jhon?</h1>
+                <button class="btn_custom_video">Custom Video</button>
+              </div>
+
+              <div class="carousy_container">
+                <ul class="carousy4">
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Tweet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >TikTok Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >LinkedIn Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Facebook Ads Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Spreadsheet to Video</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                  <li class="card_container">
+                    <div class="card" data-carousy-el="card"></div>
+                    <span class="text" data-carousy-el="card-title"
+                      >Lorem, ipsum.</span
+                    >
+                  </li>
+                </ul>
+
+                <div class="carousal_nav">
+                  <button data-carousy-btn="prev">
+                    <img src="./assets/icon/ic_arrow_left.svg" alt="icon" />
+                  </button>
+                  <button data-carousy-btn="next">
+                    <img src="./assets/icon/ic_arrow_right.svg" alt="icon" />
+                  </button>
+                </div>
+              </div>
+
+              <!-- <div class="glide4 carousal_container">
+                <div data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">Tweet to Video</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">TikTok Video</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">LinkedIn Video</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">Facebook Ads Video</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">Spreadsheet to Video</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">Lorem, ipsum.</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">Lorem, ipsum.</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="card_container">
+                        <div class="card"></div>
+                        <span class="text">Lorem, ipsum.</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="glide__arrows" data-glide-el="controls">
+                  <span class="carousal_nav" data-glide-dir="<">
+                    <img src="./assets/icon/ic_arrow_left.svg" alt="icon" />
+                  </span>
+                  <span class="carousal_nav" data-glide-dir=">">
+                    <img src="./assets/icon/ic_arrow_right.svg" alt="icon" />
+                  </span>
+                </div>
+              </div> -->
+            </div>
+
+            <dic class="spacer"></dic>
+          </div>
+
+          <article class="progress_counter">
+            <div class="button">
+              <span class="icon">
+                <img src="./assets/icon/ic_zap.svg" alt="icon" />
+              </span>
+              <span class="counter">1/5</span>
+            </div>
+
+            <div class="bottom_checkboxes" data-progress-show="false">
+              <div class="checkboxes_container">
+                <h2>
+                  Getting Started
+                  <span class="close">
+                    <img src="./assets/icon/ic_close.svg" alt="icon" />
+                  </span>
+                </h2>
+
+                <p class="status">20% Completed</p>
+
+                <div class="indicator">
+                  <progress value="1" max="5"></progress>
+                </div>
+
+                <ul class="checkboxes">
+                  <li data-checked>
+                    <span id="c1"></span>
+                    <label for="c1">Create a Video</label>
+                  </li>
+                  <li>
+                    <span id="c2"></span>
+                    <label for="c2">Add a Template</label>
+                  </li>
+                  <li>
+                    <span id="c3"></span>
+                    <label for="c3">Customise Design</label>
+                  </li>
+                  <li>
+                    <span id="c4"></span>
+                    <label for="c4">Add a Brand Kit</label>
+                  </li>
+                  <li>
+                    <span id="c5"></span>
+                    <label for="c5">Refer a friend</label>
+                  </li>
+                </ul>
+
+                <!--  -->
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- DROP-DOWNS and MODALS -->
+    <div class="dpd_create_video dpd" data-modal-hidden="true">
+      <div class="dpd_container">
+        <!-- For small screens only -->
+        <div class="dpd_head">
+          <h4>Create a Video</h4>
+          <span class="btn_create_video_close">Close</span>
+        </div>
+
+        <div class="platforms">
+          <ul>
+            <li>TikTok</li>
+            <li>Instagram Stories</li>
+            <li>Facebook Ads</li>
+            <li>YouTube</li>
+            <li>LinkedIn</li>
+            <li>Tweet to Video (auto create)</li>
+            <li>Facebook Post</li>
+            <li>Instagram Post</li>
+            <li>Twitter Post</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+            <li>Lorem, ipsum.</li>
+          </ul>
+        </div>
+
+        <div class="cutomize_section">
+          <h4>Custom Size</h4>
+
+          <div class="width_height">
+            <div class="width_container">
+              <label for="ip_width">Width</label>
+              <div>
+                <input id="ip_width" type="number" />
+                <span>px</span>
+              </div>
+            </div>
+            <div class="height_container">
+              <label for="ip_height">Height</label>
+              <div>
+                <input id="ip_height" type="number" />
+                <span>px</span>
+              </div>
+            </div>
+          </div>
+
+          <button>Create with custom size</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dpd_profile dpd" data-modal-hidden="true">
+      <div class="dpd_container">
+        <ul>
+          <li>
+            <span class="icon">
+              <img src="./assets/icon/ic_download.svg" alt="icon" />
+            </span>
+            <span class="text">Completed Projects</span>
+          </li>
+          <li>
+            <span class="icon">
+              <img src="./assets/icon/ic_help.svg" alt="icon" />
+            </span>
+            <span class="text">Dojo-Help & Docs</span>
+          </li>
+          <li>
+            <span class="icon">
+              <img src="./assets/icon/ic_feedback.svg" alt="icon" />
+            </span>
+            <span class="text">Feedback</span>
+          </li>
+          <li>
+            <span class="icon">
+              <img src="./assets/icon/ic_account.svg" alt="icon" />
+            </span>
+            <span class="text">Account</span>
+          </li>
+          <li>
+            <span class="icon">
+              <img src="./assets/icon/ic_logout.svg" alt="icon" />
+            </span>
+            <span class="text"
+              >LogOut, <span class="username">EdwardThomas</span></span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="dpd_custom_video dpd" data-modal-hidden="true">
+      <h4>Custom Size</h4>
+
+      <div class="width_height">
+        <div class="width_container">
+          <label for="ip_width">Width</label>
+          <div>
+            <input id="ip_width" type="number" />
+            <span>px</span>
+          </div>
+        </div>
+        <div class="height_container">
+          <label for="ip_height">Height</label>
+          <div>
+            <input id="ip_height" type="number" />
+            <span>px</span>
+          </div>
+        </div>
+      </div>
+
+      <button>Create with custom size</button>
+    </div>
+    <!--  -->
+
+    <!-- MODAL -->
+    <div class="brandkit_modal_overlay" data-modal-hidden="true">
+      <div class="brandkit_container">
+        <div class="modal_grid">
+          <div class="head">
+            <h2>Edit Brand Kit</h2>
+            <div class="icon brandkit_close">
+              <img src="./assets/icon/ic_close.svg" alt="icon" />
+            </div>
+          </div>
+          <div class="logo">
+            <div class="logo_ip">
+              <input type="file" hidden />
+              <span class="icon">
+                <img src="./assets/icon/ic_add.svg" alt="icon" />
+              </span>
+              <h5>LOGO</h5>
+            </div>
+          </div>
+          <div class="name ip">
+            <div class="name_ip">
+              <label for="brand_name">Name</label>
+              <input
+                id="brand_name"
+                type="text"
+                placeholder="Brand-kit name..."
+              />
+            </div>
+          </div>
+          <div class="primary_font ip">
+            <div class="font_ip">
+              <label for="primary_font">Primary Font ( Headings )</label>
+              <select id="primary_font" type="text">
+                <option value="Montserrat">Montserrat</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Montserrat">Montserrat</option>
+              </select>
+            </div>
+          </div>
+          <div class="sec_font ip">
+            <div class="font_ip">
+              <label for="secondary_font">secondary Font ( Body )</label>
+              <select id="secondary_font" type="text">
+                <option value="Montserrat">Playfair Display</option>
+                <option value="Montserrat">Playfair Display</option>
+                <option value="Montserrat">Playfair Display</option>
+                <option value="Montserrat">Playfair Display</option>
+              </select>
+            </div>
+          </div>
+          <div class="colors">
+            <div class="color_ip">
+              <span>Set Brand Colors</span>
+
+              <div class="set_color">
+                <span
+                  class="o1"
+                  style="--color: #5165ce"
+                  data-color="Primary Color"
+                ></span>
+                <span
+                  class="o2"
+                  style="--color: #091242"
+                  data-color="Secondary Color"
+                ></span>
+                <span
+                  class="a1"
+                  style="--color: #ef1212"
+                  data-color="Accent Color 1"
+                ></span>
+                <span
+                  class="a2"
+                  style="--color: #a312bb"
+                  data-color="Accent Color 2"
+                ></span>
+                <span
+                  class="a3"
+                  style="--color: #7dc980"
+                  data-color="Accent Color 3"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="submit">
+            <button>SAVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+
+    <!-- SCRIPTS -->
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
